@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+/* =========================
+   BIG EDGE CIRCLES
+========================= */
+
+@keyframes edgeCircleOne {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(45px, 60px, 0) scale(1.06);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes edgeCircleTwo {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-55px, 70px, 0) scale(0.96);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes edgeCircleThree {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(60px, -55px, 0) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes edgeCircleFour {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-50px, -40px, 0) scale(1.05);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* =========================
+   SMALL CIRCLES
+========================= */
+
+@keyframes smallCircleOne {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(80px, 30px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes smallCircleTwo {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-70px, 45px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes smallCircleThree {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(90px, -45px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes smallCircleFour {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-80px, -35px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================
+   LOADING BAR
+========================= */
+
+@keyframes loadingBar {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.animate-loading-bar {
+  animation: loadingBar 1.2s linear infinite;
+}
+
+/* =========================
+   ANIMATION CLASSES
+========================= */
+
+.circle-edge-one {
+  animation: edgeCircleOne 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+.circle-edge-two {
+  animation: edgeCircleTwo 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.circle-edge-three {
+  animation: edgeCircleThree 11s ease-in-out infinite;
+  will-change: transform;
+}
+
+.circle-edge-four {
+  animation: edgeCircleFour 13s ease-in-out infinite;
+  will-change: transform;
+}
+
+.circle-small-one {
+  animation: smallCircleOne 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.circle-small-two {
+  animation: smallCircleTwo 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+.circle-small-three {
+  animation: smallCircleThree 8.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.circle-small-four {
+  animation: smallCircleFour 9.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Tiny mobile scrollbar */
+
+.mobile-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.mobile-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mobile-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(70, 103, 67, 0.18);
+  border-radius: 999px;
+}
+
+.mobile-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(70, 103, 67, 0.3);
+}
+
+/* Firefox */
+.mobile-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(70, 103, 67, 0.18) transparent;
+}
+
+/* Match your theme for browser autofill */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #e9e8e3 inset !important;
+  box-shadow: 0 0 0 1000px #e9e8e3 inset !important;
+  -webkit-text-fill-color: #31332f !important;
+  caret-color: #31332f;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #31332f !important;
+}
+
+.chat-input-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-input-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 20px 0;
+}
+
+.chat-input-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(70, 103, 67, 0.18);
+  border-radius: 999px;
+}
+
+.chat-input-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(70, 103, 67, 0.3);
+}
+
+.chat-input-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(70, 103, 67, 0.18) transparent;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
